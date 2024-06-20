@@ -7,8 +7,14 @@ import { registerValidation, loginValidation, createPostValidation} from './vali
 import {checkAuth, handleValidationErrors} from "./utils/index.js";
 import { UserController, PostController} from "./controllers/index.js";
 
+// mongoose
+//     .connect('mongodb+srv://parvizi2003:mongodbcluster@cluster0.fzmlg2x.mongodb.net/somon')
+//     .then(() => console.log('DB ok'))
+//     .catch(err => console.log(err));
+
+
 mongoose
-    .connect('mongodb+srv://parvizi2003:mongodbcluster@cluster0.fzmlg2x.mongodb.net/somon')
+    .connect('mongodb://localhost:27017/somon')
     .then(() => console.log('DB ok'))
     .catch(err => console.log(err));
 
